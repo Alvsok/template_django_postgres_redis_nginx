@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 ROOT_PATH = os.path.dirname(__file__)
 
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -101,20 +101,20 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_TZ = True
 
-STATIC_URL = '/static/'
-STATIC_ROOT = '/app/static'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'core/staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+
+
+print('BASE_DIR', BASE_DIR)
+print('STATIC_URL', STATIC_URL)
+print('STATIC_ROOT', STATIC_ROOT)
+print('STATICFILES_DIRS', STATICFILES_DIRS)
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
