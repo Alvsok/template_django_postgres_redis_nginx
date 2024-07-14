@@ -111,10 +111,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'core/staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
 
-print('BASE_DIR', BASE_DIR)
-print('STATIC_URL', STATIC_URL)
-print('STATIC_ROOT', STATIC_ROOT)
-print('STATICFILES_DIRS', STATICFILES_DIRS)
-
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
